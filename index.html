@@ -60,7 +60,8 @@ h1,h2,h3{font-weight:800}
 .bento{display:grid;grid-template-columns:1.7fr 1fr 1fr;grid-template-rows:1fr 1fr auto;gap:14px;height:520px}
 .tile{border-radius:34px;position:relative;overflow:hidden}
 .t-main{grid-row:1/4;background:linear-gradient(160deg,var(--blue) 0,var(--blue-d) 100%);color:#fff}
-.t-main img.cover.cutf{object-fit:cover;object-position:30% 12%}
+.t-main img.cover.cutf{object-fit:contain;object-position:center bottom}
+@media(min-width:1021px){.hero-grid{grid-template-columns:.82fr 1.18fr}.bento{grid-template-columns:1.5fr 1fr}.t-a,.t-b,.t-c{grid-column:2}.big{font-size:56px}}
 .t-main img.cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
 .t-main::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(0deg,rgba(29,39,68,.35),transparent);pointer-events:none}
 .t-main .tag{position:absolute;z-index:2;left:18px;top:18px;background:#fff;color:var(--navy);border-radius:99px;padding:8px 14px;font-weight:800;font-size:13px}
