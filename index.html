@@ -269,7 +269,7 @@ const li = a => a.map(x=>`<li>${x}</li>`).join('');
 function nshow(t){
   document.querySelectorAll('#nseg button').forEach(b=>b.setAttribute('aria-selected', b.dataset.t===t));
   if(t==='botox'){
-    npanel.innerHTML = '<div class="rows">' + BOTOX.map(r=>`<div class="row"><div><h4>${r[0]}</h4><p>${r[1]}</p></div><span class="price">${money(r[2])}</span></div>`).join('') + '</div>';
+    npanel.innerHTML = '<div class="rows">' + BOTOX.map(r=>`<div class="row"><div><h4>${r[0]}</h4><p>${r[1]}</p></div></div>`).join('') + `<p class="lead" style="margin:4px 2px 0;color:#fff">Препарат и дозировку подбирает врач на приёме. Стоимость уточняйте в WhatsApp.</p><a class="btn" href="${WA('Здравствуйте! Хочу записаться на ботулинотерапию.')}" rel="noopener">${WAI}Записаться на ботулинотерапию</a></div>`;
   } else {
     npanel.innerHTML = '<div class="rows">' + EDU.map(e=>`<article class="edu"><div class="tag">${e.n}<small>${e.s}</small></div>
       ${e.gift?`<div class="gift">🎁 ${e.gift}</div>`:''}
